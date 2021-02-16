@@ -7,8 +7,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist') + '/js',
     publicPath: '/',
-    filename: 'vue-kakao-plugin.js',
-    library: 'VueKakaoPlugin',
+    filename: 'vue-kakao-sdk.js',
+    library: 'VueKakaoSdk',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },

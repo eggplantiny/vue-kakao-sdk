@@ -12,11 +12,11 @@
 </div>
 </body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script type="text/javascript" src="../dist/js/vue-kakao-plugin.js"></script>
+<script type="text/javascript" src="../dist/js/vue-kakao-sdk.js"></script>
 <script type="text/javascript">
   const apiKey = '11ddd4c559a02accc901cc49a332866d'
   console.log(window)
-  Vue.use(window.VueKakaoPlugin, { apiKey: apiKey })
+  Vue.use(window.VueKakaoSdk, { apiKey: apiKey })
 
   const app = new Vue({
     el: '#app',

@@ -1,4 +1,4 @@
-# vue-kakao-plugin
+# vue-kakao-sdk
 
 ---
 
@@ -8,34 +8,35 @@ It is a [Kakao](https://developers.kakao.com/tool) SDK plugin wrapped with Vue.j
 
 ---
 
-### CDN
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-kakao-plugin@0.0.1/dist/js/vue-kakao-plugin.min.js"></script>
-<script type="text/javascript">
-    const apiKey = 'Your Kakao API Javascript Key'
-    Vue.use(window.VueFastScroll,{ apiKey: apiKey })
-</script>
-```
-
 ### Yarn or NPM
 ```
 # yarn
-yarn add vue-kakao-plugin
+yarn add vue-kakao-sdk
 
 # npm
-npm install vue-kakao-plugin
+npm install vue-kakao-sdk
+```
+
+### CDN
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-kakao-sdk@0.0.3/dist/js/vue-kakao-sdk.min.js"></script>
+<script type="text/javascript">
+    const apiKey = 'Your Kakao API Javascript Key'
+    Vue.use(window.VueKakaoSdk,{ apiKey: apiKey })
+</script>
 ```
 
 ## How to use this plugin? 🧐
 
 ```js
 import Vue from 'vue'
-import VueKakaoPlugin from 'vue-kakao-plugin'
+import VueKakaoSdk from 'vue-kakao-sdk'
 
 const apiKey = 'Your Kakao API Javascript Key'
 
-Vue.use(VueKakaoPlugin, { apiKey }) // You have to pass your "Kakao SDK Javascript apiKey"
+// You have to pass your "Kakao SDK Javascript apiKey"
+Vue.use(VueKakaoSdk, { apiKey })
 
 // then you can call kakao sdk with
 // this.$kakao or window.Kakao

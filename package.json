@@ -1,8 +1,8 @@
 {
-  "name": "vue-kakao-plugin",
+  "name": "vue-kakao-sdk",
   "description": "Kakao SDK Plugin for Vue.js",
-  "main": "dist/js/vue-kakao-plugin.js",
-  "version": "0.0.1",
+  "main": "dist/js/vue-kakao-sdk.js",
+  "version": "0.0.3",
   "scripts": {
     "build": "webpack",
     "lint": "eslint --ext .js,.vue src tests --fix",
@@ -13,13 +13,13 @@
     "email": "eggplantiny@gmail.com"
   },
   "bugs": {
-    "url": "https://github.com/eggplantiny/vue-kakao-plugin/issues"
+    "url": "https://github.com/eggplantiny/vue-kakao-sdk/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggplantiny/vue-kakao-plugin.git"
+    "url": "git+https://github.com/eggplantiny/vue-kakao-sdk.git"
   },
-  "homepage": "https://github.com/eggplantiny/vue-kakao-plugin",
+  "homepage": "https://github.com/eggplantiny/vue-kakao-sdk",
   "license": "MIT",
   "keywords": [
     "vue",
