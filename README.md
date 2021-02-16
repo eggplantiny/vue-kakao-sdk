@@ -2,7 +2,19 @@
 
 ---
 
-It is a [Kakao](https://developers.kakao.com/tool) SDK plugin wrapped with Vue.js
+[Kakao SDK](https://developers.kakao.com/tool) plugin wrapped with Vue.js
+
+Now you can easily use Kakao SDK with Vue.js
+
+Just intialize plugin and type 
+
+```js
+this.$kakao.Auth
+
+// or
+
+this.$kakao.Link
+```
 
 ## Intall
 
@@ -53,6 +65,22 @@ Vue.use(VueKakaoSdk, { apiKey })
         content,
         buttons
       })
+    },
+    loginWithKakao () {
+      this.$kakao.Auth.login({
+        success: function(authObj) {
+          alert(JSON.stringify(authObj))
+        },
+        fail: function(err) {
+          alert(JSON.stringify(err))
+        },
+      })
+    },
+    shareStoryWeb () {
+      this.$kakao.Story.share({
+        url: 'https://github.com/eggplantiny/vue-kakao-sdk',
+        text: 'Test story share with vue-kakao-sdk'
+      })
     }
   }
 }
@@ -61,3 +89,6 @@ Vue.use(VueKakaoSdk, { apiKey })
 ## Author
 
 [eggplantiny](https://github.com/eggplantiny)
+
+## License
+MIT
