@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="app">
+    <div>
+        <button @click="sendKakaoLink">
+            sendKakaoLink
+        </button>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="../dist/js/vue-kakao-plugin.js"></script>
+<script type="text/javascript">
+  const apiKey = '11ddd4c559a02accc901cc49a332866d'
+  console.log(window)
+  Vue.use(window.VueKakaoPlugin, { apiKey: apiKey })
+
+  const app = new Vue({
+    el: '#app',
+    data () {
+      return {
+        Link: {
+          content: {
+            title: 'Title',
+            description: 'Description',
+            imageUrl:
+              'http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+            link: {
+              mobileWebUrl: 'https://developers.kakao.com',
+              webUrl: 'https://developers.kakao.com',
+            }
+          },
+          buttons: [
+            {
+              title: 'Go to Web',
+              link: {
+                mobileWebUrl: 'https://developers.kakao.com',
+                webUrl: 'https://developers.kakao.com',
+              }
+            },
+            {
+              title: 'Go To App',
+              link: {
+                mobileWebUrl: 'https://developers.kakao.com',
+                webUrl: 'https://developers.kakao.com',
+              }
+            }
+          ],
+          objectType: 'feed'
+        }
+      }
+    },
+    methods: {
+      async sendKakaoLink ({ objectType, content, buttons } = {}) {
+        objectType = objectType || this.Link.objectType
+        content = content || this.Link.content
+        buttons = buttons || this.Link.buttons
+
+        this.$kakao.Link.sendDefault({
+          objectType,
+          content,
+          buttons
+        })
+      }
+    }
+  })
+</script>
+</html>
