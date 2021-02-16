@@ -37,6 +37,8 @@ npm install vue-kakao-sdk
 
 ## How to use this plugin? 🧐
 
+You can play an example on [codepan](https://codepen.io/sigran0/pen/WNopPZw)
+
 ```js
 import Vue from 'vue'
 import VueKakaoSdk from 'vue-kakao-sdk'
