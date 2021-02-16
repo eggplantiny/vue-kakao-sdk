@@ -1,29 +1,62 @@
-# vue-kakao
+# vue-kakao-plugin
 
-## Project setup
-```
-yarn install
-```
+---
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+It is a [Kakao](https://developers.kakao.com/tool) SDK plugin wrapped with Vue.js
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## Intall
 
-### Run your unit tests
-```
-yarn test:unit
+---
+
+### CDN
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-kakao-plugin@0.0.1/dist/js/vue-kakao-plugin.min.js"></script>
+<script type="text/javascript">
+    const apiKey = 'Your Kakao API Javascript Key'
+    Vue.use(window.VueFastScroll,{ apiKey: apiKey })
+</script>
 ```
 
-### Lints and fixes files
+### Yarn or NPM
 ```
-yarn lint
+# yarn
+yarn add vue-kakao-plugin
+
+# npm
+npm install vue-kakao-plugin
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## How to use this plugin? 🧐
+
+```js
+import Vue from 'vue'
+import VueKakaoPlugin from 'vue-kakao-plugin'
+
+const apiKey = 'Your Kakao API Javascript Key'
+
+Vue.use(VueKakaoPlugin, { apiKey }) // You have to pass your "Kakao SDK Javascript apiKey"
+
+// then you can call kakao sdk with
+// this.$kakao or window.Kakao
+// in Vue Component
+...{
+  methods: {
+    async sendKakaoLink ({ objectType, content, buttons } = {}) {
+      objectType = objectType || this.Link.objectType
+      content = content || this.Link.content
+      buttons = buttons || this.Link.buttons
+
+      this.$kakao.Link.sendDefault({
+        objectType,
+        content,
+        buttons
+      })
+    }
+  }
+}
+```
+
+## Author
+
+[eggplantiny](https://github.com/eggplantiny)
