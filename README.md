@@ -1,7 +1,5 @@
 # vue-kakao-sdk
 
----
-
 [Kakao SDK](https://developers.kakao.com/tool) plugin wrapped with Vue.js
 
 Now you can easily use Kakao SDK with Vue.js
@@ -17,8 +15,6 @@ this.$kakao.Link
 ```
 
 ## Intall
-
----
 
 ### Yarn or NPM
 ```
