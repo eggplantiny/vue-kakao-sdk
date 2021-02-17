@@ -7,11 +7,11 @@ Now you can easily use Kakao SDK with Vue.js
 Just intialize plugin and type 
 
 ```js
-this.$kakao.Auth
+this.$kakao
 
 // or
 
-this.$kakao.Link
+window.Kakao
 ```
 
 ## Intall
