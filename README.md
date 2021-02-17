@@ -28,7 +28,7 @@ npm install vue-kakao-sdk
 ### CDN
 ```html
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-kakao-sdk@0.0.3/dist/js/vue-kakao-sdk.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-kakao-sdk@0.0.4/dist/js/vue-kakao-sdk.min.js"></script>
 <script type="text/javascript">
     const apiKey = 'Your Kakao API Javascript Key'
     Vue.use(window.VueKakaoSdk,{ apiKey: apiKey })
@@ -40,6 +40,7 @@ npm install vue-kakao-sdk
 You can play an example on [codepan](https://codepen.io/sigran0/pen/WNopPZw)
 
 ```js
+//  main.js
 import Vue from 'vue'
 import VueKakaoSdk from 'vue-kakao-sdk'
 
@@ -47,6 +48,10 @@ const apiKey = 'Your Kakao API Javascript Key'
 
 // You have to pass your "Kakao SDK Javascript apiKey"
 Vue.use(VueKakaoSdk, { apiKey })
+```
+
+```
+//  App.vue
 
 // then you can call kakao sdk with
 // this.$kakao or window.Kakao
@@ -83,6 +88,15 @@ Vue.use(VueKakaoSdk, { apiKey })
   }
 }
 ```
+
+## Options
+
+|Key|Description|Default|
+|------|---|---|
+|* apiKey|Your Kakao SDK Javascript Key|* required|
+|scriptUrl|Link of kakao SDK|https://developers.kakao.com/sdk/js/kakao.min.js|
+|scriptId|Script ID of kakao SDK|kakao_script|
+|callback|Callback function of script loaded|null|
 
 ## Author
 

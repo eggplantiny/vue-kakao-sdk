@@ -31,9 +31,10 @@ function initializeScript (scriptUrl, scriptId, apiKey) {
 
 module.exports = {
   install (Vue, options = {}) {
-    let { apiKey, scriptUrl, scriptId } = options
+    let { apiKey, scriptUrl, scriptId, callback } = options
     scriptUrl = scriptUrl || 'https://developers.kakao.com/sdk/js/kakao.min.js'
     scriptId = scriptId || 'kakao_script'
+    callback = callback || null
 
     if (!apiKey) {
       throw Error(`You have to pass 'apiKey' in options`)
@@ -42,9 +43,15 @@ module.exports = {
     const initializedScript = initialized()
 
     if (!initializedScript) {
-      initializeScript(scriptUrl, scriptId, apiKey).then(() => {}).finally(() => {
-        Vue.prototype.$kakao = window.Kakao
-      })
+      initializeScript(scriptUrl, scriptId, apiKey)
+        .then(() => {
+          if (typeof callback === 'function') {
+            callback()
+          }
+        })
+        .finally(() => {
+          Vue.prototype.$kakao = window.Kakao
+        })
     }
   }
 }
