@@ -59,7 +59,7 @@ Vue.use(VueKakaoSdk, { apiKey })
 export default {
   ...
   methods: {
-    async sendKakaoLink ({ objectType, content, buttons } = {}) {
+    sendKakaoLink ({ objectType, content, buttons } = {}) {
       objectType = objectType || this.Link.objectType
       content = content || this.Link.content
       buttons = buttons || this.Link.buttons
