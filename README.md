@@ -91,12 +91,12 @@ Vue.use(VueKakaoSdk, { apiKey })
 
 ## Options
 
-|Key|Description|Default|
-|------|---|---|
-|* apiKey|Your Kakao SDK Javascript Key|* required|
-|scriptUrl|Link of kakao SDK|https://developers.kakao.com/sdk/js/kakao.min.js|
-|scriptId|Script ID of kakao SDK|kakao_script|
-|callback|Callback function of script loaded|null|
+|Key|Description|Type|Default|
+|------|---|---|---|
+|* apiKey|Your Kakao SDK Javascript Key|String|* required|
+|scriptUrl|Link of kakao SDK|String|https://developers.kakao.com/sdk/js/kakao.min.js|
+|scriptId|Script ID of kakao SDK|String|kakao_script|
+|callback|Callback function of script loaded|Function|null|
 
 ## Author
 
