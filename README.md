@@ -50,13 +50,14 @@ const apiKey = 'Your Kakao API Javascript Key'
 Vue.use(VueKakaoSdk, { apiKey })
 ```
 
-```
+```js
 //  App.vue
 
 // then you can call kakao sdk with
 // this.$kakao or window.Kakao
 // in Vue Component
-...{
+export default {
+  ...
   methods: {
     async sendKakaoLink ({ objectType, content, buttons } = {}) {
       objectType = objectType || this.Link.objectType
