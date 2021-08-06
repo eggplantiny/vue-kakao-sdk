@@ -1,5 +1,6 @@
 {
   "name": "vue-kakao-sdk",
+  "private": false,
   "description": "Kakao SDK Plugin for Vue.js",
   "main": "dist/js/vue-kakao-sdk.js",
   "types": "types/index.d.ts",
