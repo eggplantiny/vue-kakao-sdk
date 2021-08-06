@@ -28,11 +28,13 @@
     "vue-kakao-plugin",
     "kakao"
   ],
+  "dependencies": {
+    "@types/kakao-js-sdk": "latest"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@nuxt/types": "^2.15.7",
-    "@types/kakao-js-sdk": "^1.39.1",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.5",
     "eslint": "^5.16.0",
