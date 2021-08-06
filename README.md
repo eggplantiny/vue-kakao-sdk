@@ -28,7 +28,7 @@ npm install vue-kakao-sdk
 ### CDN
 ```html
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-kakao-sdk@0.0.4/dist/js/vue-kakao-sdk.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-kakao-sdk@0.1.0/dist/js/vue-kakao-sdk.min.js"></script>
 <script type="text/javascript">
     const apiKey = 'Your Kakao API Javascript Key'
     Vue.use(window.VueKakaoSdk,{ apiKey: apiKey })
@@ -98,6 +98,19 @@ export default {
 |scriptUrl|Link of kakao SDK|String|https://developers.kakao.com/sdk/js/kakao.min.js|
 |scriptId|Script ID of kakao SDK|String|kakao_script|
 |callback|Callback function of script loaded|Function|null|
+
+## Support Typescript
+### If you wanna use Typescript
+Add `vue-kakao-sdk/types` to the `compilerOptions.types` section of your project's `tsconfig.json` file:
+```json
+{
+  "compilerOptions": {
+    "types": [
+      "vue-kakao-sdk/types"
+    ]
+  }
+}
+```
 
 ## Author
 
