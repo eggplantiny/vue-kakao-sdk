@@ -1,6 +1,17 @@
-import vue from 'vue'
+import vue, { PluginFunction } from 'vue'
+
+interface VueKakaoSdkOptions {
+  apiKey: string
+  scriptUrl?: string
+  scriptId?: string
+  callback: () => void
+}
 
 declare module 'vue/types/vue' {
+  export interface VuetifyDialogPlugin {
+    install: PluginFunction<VueKakaoSdkOptions>
+  }
+
   interface Vue {
     $kakao: typeof Kakao
   }
