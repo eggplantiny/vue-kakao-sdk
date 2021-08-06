@@ -7,11 +7,14 @@ interface VueKakaoSdkOptions {
   callback: () => void
 }
 
-declare module 'vue/types/vue' {
-  export interface VuetifyDialogPlugin {
-    install: PluginFunction<VueKakaoSdkOptions>
-  }
+declare const VueKakaoSdkPlugin: VueKakaoSdkPlugin
+export default VueKakaoSdkPlugin
 
+export interface VueKakaoSdkPlugin {
+  install: PluginFunction<VueKakaoSdkOptions>
+}
+
+declare module 'vue/types/vue' {
   interface Vue {
     $kakao: typeof Kakao
   }
