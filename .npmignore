@@ -4,7 +4,6 @@ example/
 node_modules/
 src/
 tests/
-types/
 .eslintrc.js
 .gitignore
 .npmignore

@@ -39,6 +39,7 @@ npm install vue-kakao-sdk
 
 You can play an example on [codepan](https://codepen.io/sigran0/pen/WNopPZw)
 
+### Vue2.x
 ```js
 //  main.js
 import Vue from 'vue'
@@ -48,6 +49,11 @@ const apiKey = 'Your Kakao API Javascript Key'
 
 // You have to pass your "Kakao SDK Javascript apiKey"
 Vue.use(VueKakaoSdk, { apiKey })
+```
+
+### Vue3.x
+```js
+
 ```
 
 ```js
