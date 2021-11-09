@@ -1,0 +1,12 @@
+.idea
+github/
+example/
+node_modules/
+src/
+test/
+types/
+eslintrc.js
+.gitignore
+.npmignore
+webpacj.config.js
+yarn.lock
