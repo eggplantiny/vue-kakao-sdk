@@ -50,7 +50,9 @@ module.exports = {
           }
         })
         .finally(() => {
-          Vue.prototype.$kakao = window.Kakao
+          if (Vue.prototype) {
+            Vue.prototype.$kakao = window.Kakao
+          }
         })
     }
   }
