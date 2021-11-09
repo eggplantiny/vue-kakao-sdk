@@ -1,12 +1,12 @@
 .idea
-github/
+.github/
 example/
 node_modules/
 src/
-test/
+tests/
 types/
-eslintrc.js
+.eslintrc.js
 .gitignore
 .npmignore
-webpacj.config.js
+webpack.config.js
 yarn.lock
