@@ -51,11 +51,6 @@ const apiKey = 'Your Kakao API Javascript Key'
 Vue.use(VueKakaoSdk, { apiKey })
 ```
 
-### Vue3.x
-```js
-
-```
-
 ```js
 //  App.vue
 
@@ -95,6 +90,9 @@ export default {
   }
 }
 ```
+
+## If you wanna use this plugin on Vue3
+Please use [Vue3-kakao-sdk](https://www.npmjs.com/package/vue3-kakao-sdk)
 
 ## Options
 
